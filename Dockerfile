@@ -1,2 +1,3 @@
 FROM alpine
-RUN echo Hallo Welt
+ARG TESTARG=Bla
+RUN echo Hallo Welt ${TESTARG}
