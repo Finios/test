@@ -1,0 +1,21 @@
+#!/bin/bash
+#
+# Build hook for Docker Automated Build.
+#
+# This hooks modifies the Dockerfile by inserting the image version in the
+# related label.
+#
+
+echo "Environment variables:
+    IMAGE_NAME=$IMAGE_NAME
+    DOCKER_REPO=$DOCKER_REPO
+	CACHE_TAG=$CACHE_TAG
+    DOCKER_TAG=$DOCKER_TAG
+    SOURCE_BRANCH=$SOURCE_BRANCH
+	SOURCE_COMMIT=$SOURCE_COMMIT
+	COMMIT_MSG=$COMMIT_MSG
+    IMAGE_VERSION=$IMAGE_VERSION
+	DOCKERFILE_PATH=$DOCKERFILE_PATH
+"
+
+docker build  -f $DOCKERFILE_PATH -t $IMAGE_NAME .
