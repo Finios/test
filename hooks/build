@@ -1,4 +1,5 @@
 #!/bin/bash
 echo "Test=$TEST"
 echo "DOCKERCLOUD_TRIGGER_BODY=$DOCKERCLOUD_TRIGGER_BODY"
+echo "test"
 docker build --build-arg TESTARG=$TEST -f $DOCKERFILE_PATH -t $IMAGE_NAME .
