@@ -1,7 +1,0 @@
-#!/bin/bash
-echo "Adding tag '$DOCKER_NEWTAG' to image..."
-docker tag $IMAGE_NAME ${DOCKER_REPO}:test
-echo "Pushing image..."
-docker push ${DOCKER_REPO}:test
-
-echo "post_push hook terminated successfully."
