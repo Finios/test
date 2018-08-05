@@ -13,5 +13,5 @@ echo "Environment variables:
   IMAGE_VERSION=$IMAGE_VERSION
 "
 echo "curl"
-var = (curl -s "https://github.com/kovidgoyal/calibre/tags.atom" | grep -oP '(?<=<id>tag:github.com,2008:Repository/10332822/v).*?(?= </id>)')
-echo var
+var = curl -s "https://github.com/kovidgoyal/calibre/tags.atom" | grep -oP '(?<=<id>tag:github.com,2008:Repository/10332822/v).*?(?= </id>)'
+echo $var
